@@ -7,6 +7,10 @@ body{
   font-weight: 300;  
 }
 
+button{
+  border-radius: 0;
+}
+
 #searchBar {
   margin: 15px 10px;
 }
@@ -16,12 +20,25 @@ body{
   overflow: auto;
 }
 
+.form-control {
+  border-radius: 0;
+}
+
 h1 {
   font-weight: 400; 
 }
 
+.header{
+  color: #555555;
+  padding: 10px;
+  padding-left: 20px;
+}
 input {
   font-weight: 300;
+}
+
+.input-group-addon {
+  border-radius: 0; 
 }
 
 label {

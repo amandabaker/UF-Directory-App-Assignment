@@ -7,7 +7,7 @@
   </head>
   <body ng-app="directoryApp">
     <div class="container">
-      <div class="row">
+      <div class="row header">
         <h1>UF Directory App</h1>
       </div>
       <div class="row" ng-controller="ListingsController">
@@ -69,7 +69,7 @@
                        ng-model="address" placeholder="Address"/>
               </label>
               <label class="col-sm-2 col-md-2">
-                <input type="submit" id="submitBuilding" value="Submit"/>
+                <input type="submit" id="submitBuilding" value="Submit" ng-click="toggleAddNew()"/>
               </label>
             </form>
           </div>
