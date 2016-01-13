@@ -32,8 +32,10 @@ h1 {
   color: blue;
   padding: 10px;
   padding-left: 20px;
-  background-color: orange;
   margin-bottom: 10px;
+  border-color: orange;
+  border-width: 0 0 5px 0;
+  border-style: solid;
 }
 input {
   font-weight: 300;
@@ -54,6 +56,9 @@ th{
   font-weight: 300;
 }
 
+tr{
+  border-color: orange;
+}
 @font-face {
   font-family: 'Oswald', sans-serif;
 }
