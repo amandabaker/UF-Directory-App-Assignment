@@ -1,6 +1,10 @@
+.addNewBlock{
+  margin-top: 10px;
+}
+
 body{
   font-family: 'Oswald', Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 300;  
 }
 
 #searchBar {
