@@ -29,9 +29,11 @@ h1 {
 }
 
 .header{
-  color: #555555;
+  color: blue;
   padding: 10px;
   padding-left: 20px;
+  background-color: orange;
+  margin-bottom: 10px;
 }
 input {
   font-weight: 300;
@@ -39,6 +41,10 @@ input {
 
 .input-group-addon {
   border-radius: 0; 
+}
+
+.jumbotron{
+  background-color: transparent; 
 }
 
 label {
