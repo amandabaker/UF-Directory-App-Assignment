@@ -33,7 +33,7 @@
               <tr>
                 <th>Code</th>
                 <th>Building Name</th>
-                <th><span class="glyphicon glyphicon-trash"></span></th>
+                <th><span></span></th>
               </tr>
               <!-- 
                 Fill in the rest of the table:
@@ -44,7 +44,7 @@
                   ng-click="showDetails($index)">
                 <th> {{ listing.code }} </th>
                 <th> {{ listing.name }} </th>
-                <th><span class="glyphicon glyphicon-remove-circle" 
+                <th><span class="glyphicon glyphicon-trash" 
                           ng-click="deleteListing($index)"></span></th>
               </tr>
             </table>
@@ -97,7 +97,7 @@
               <h4> Address: {{ detailedInfo.address }} </h4>
               <h6> Location: {{ detailedInfo.coordinates.latitude }}, {{ detailedInfo.coordinates.longitude }} </h6>
             </div>
-            <div ng-show="!detaiedInfo">
+            <div ng-show="!detailedInfo">
               <h3>Select any building to view detailed information</h3>
             </div>
           </div>
