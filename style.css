@@ -12,10 +12,7 @@ body{
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-weight: 300;  
   background-color: transparent;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-size: 100% auto;
   height: 100%;
 }
 
@@ -35,12 +32,17 @@ h1 {
   font-weight: 400; 
 }
 
+h2 {
+  text-align: left;
+}
+
 .header{
   color: blue;
   padding: 10px;
   padding-left: 20px;
   margin-bottom: 10px;
-  border-color: orange;
+  background-color: #FF9D00;
+  border-color: #FF9D00;
   border-width: 0 0 5px 0;
   border-style: solid;
   z-index: 0;
@@ -65,12 +67,18 @@ input {
 
 .jumbotron{
   background-color: transparent; 
+  color: white;
+  text-shadow: -1px -1px #000;
 }
 
 label {
   width= 100%;
   padding-left: 0;
   padding-right: 0;
+}
+
+.row1 {
+  font-size: 25px;
 }
 
 #searchBar {
