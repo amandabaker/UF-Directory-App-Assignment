@@ -10,6 +10,7 @@ var fs = require('fs'),
     config = require('./config');
 
 /* Connect to your database */
+mongoose.connect('mongodb://<abaker>:<SWeng2016>@ds056698.mongolab.com:56698/software-engineering');
 
 /* 
   Instantiate a mongoose model for each listing object in the JSON file, 
