@@ -1,11 +1,10 @@
+/* Fill out these functions using Mongoose queries*/
+
 var fs = require('fs'),
     mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     Listing = require('./ListingSchema.js'),
     config = require('./config.js');
-
-/* Fill out these functions using Mongoose queries*/
-
 
 
 var findLibraryWest = function() {
@@ -39,7 +38,7 @@ var updatePhelpsMemorial = function() {
    */
    var PMHC_update = Listing.find( { code: "Phelps Laboratory" } );
 
-   Listing.findOneAndUpdate( { code: "Phelps Laboratory" }, { address: " "} )
+   Listing.findOneAndUpdate( { code: "Phelps Laboratory" }, { address: "TEST ADDRESSS SDFSDFNSFS:LD 1234"} )
 
    console.log('Updated Phelps Memorial Hospital Centers address:\n' + PMHC_update);
 };
@@ -47,7 +46,8 @@ var retrieveAllListings = function() {
   /*
     Retrieve all listings in the database, and log them to the console.
    */
-   var everything = Listing.find(); // possibly    db.Listing.find()    or     Listing.entries.find()
+
+   var everything = Listing.find();
 
    console.log('Listings Database:\n' + everything);
 };
