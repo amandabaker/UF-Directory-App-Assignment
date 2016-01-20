@@ -1,5 +1,7 @@
 /* Fill out these functions using Mongoose queries*/
 
+
+
 var findLibraryWest = function() {
   /* 
     Find the document that contains data corresponding to Library West,
@@ -18,18 +20,22 @@ var removeCable = function() {
     on cable TV. Since we live in the 21st century and most courses are now web based, go ahead
     and remove this listing from your database and log the document to the console. 
    */
-   var cable;
+   var cable = Listing.find( { code: "CABL" } );
 
-   console.log('deleted the following listing:\n' + cable);
+   Listing.remove( { cable { justOne: true } );
+
+   console.log('Deleted the following listing:\n' + cable);
 };
 var updatePhelpsMemorial = function() {
   /*
     Phelps Memorial Hospital Center's address is incorrect. Find the listing, update it, and then 
     log the updated document to the console. 
    */
-   var PMHC_update;
+   var PMHC_update = Listing.find( { code: "Phelps Laboratory" } );
 
-   console.log('updated Phelps Memorial Hospital Centers address:\n' + PMHC_update);
+   Listing.findOneAndUpdate( { code: "Phelps Laboratory" }, { address: " "} )
+
+   console.log('Updated Phelps Memorial Hospital Centers address:\n' + PMHC_update);
 };
 var retrieveAllListings = function() {
   /* 
