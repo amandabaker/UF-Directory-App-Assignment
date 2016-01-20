@@ -15,7 +15,7 @@ var findLibraryWest = function() {
 
    var libWestdata = Listing.find( { name: "Library West" } );
 
-   console.log('Library West Information:\n' + libWestdata);
+   console.log('\nLibrary West Information:\n' + libWestdata);
 
 
 };
@@ -29,7 +29,7 @@ var removeCable = function() {
 
    Listing.findOneAndRemove( { code: "CABL" }, function(err) { if (err) throw err; } );
 
-   console.log('Deleted the listing!');
+   console.log('\nDeleted the listing!');
 };
 var updatePhelpsMemorial = function() {
   /*
@@ -40,7 +40,7 @@ var updatePhelpsMemorial = function() {
 
    Listing.findOneAndUpdate( { code: "Phelps Laboratory" }, { address: "TEST ADDRESSS SDFSDFNSFS:LD 1234"} )
 
-   console.log('Updated Phelps Memorial Hospital Centers address:\n' + PMHC_update);
+   console.log('\nUpdated Phelps Memorial Hospital Centers address:\n' + PMHC_update);
 };
 var retrieveAllListings = function() {
   /*
@@ -49,7 +49,7 @@ var retrieveAllListings = function() {
 
    var everything = Listing.find();
 
-   console.log('Listings Database:\n' + everything);
+   console.log('\nListings Database:\n' + everything);
 };
 
 findLibraryWest();
