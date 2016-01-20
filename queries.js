@@ -36,11 +36,13 @@ var updatePhelpsMemorial = function() {
     Phelps Memorial Hospital Center's address is incorrect. Find the listing, update it, and then
     log the updated document to the console.
    */
-   var PMHC_update = Listing.find( { code: "Phelps Laboratory" } );
+   //var PMHC_update = Listing.find( { code: "Phelps Laboratory" } );
 
    Listing.findOneAndUpdate( { code: "Phelps Laboratory" }, { address: "TEST ADDRESSS SDFSDFNSFS:LD 1234"} )
 
-   console.log('\nUpdated Phelps Memorial Hospital Centers address:\n' + PMHC_update);
+   var PMHC_update = Listing.find( {code: "Phelps Laboratory"});
+
+   console.log('\nUpdated Phelps Laboratory\'s address:\n' + PMHC_update);
 };
 var retrieveAllListings = function() {
   /*
