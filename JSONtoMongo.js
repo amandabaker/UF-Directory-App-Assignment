@@ -16,6 +16,7 @@ mongoose.connect('mongodb://janedoe:janedoe@ds047315.mongolab.com:47315/software
   Instantiate a mongoose model for each listing object in the JSON file,
   and then save it to your Mongo database
  */
+Listing.save();
 
 
 /*
