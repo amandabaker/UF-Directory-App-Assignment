@@ -5,6 +5,7 @@ var fs = require('fs'),
     Schema = mongoose.Schema,
     Listing = require('./ListingSchema.js'),
     config = require('./config.js');
+mongoose.connect(config.db.uri);
 
 
 var findLibraryWest = function() {
@@ -13,9 +14,12 @@ var findLibraryWest = function() {
     then log it to the console.
    */
 
-   var libWestdata = Listing.find( { name: "Library West" } );
+   Listing.find({ name: "Library West" }, function(err, libWestdata) {
+    if (err) throw err;
+    console.log('\nLibrary West Information:\n' + libWestdata);
+   });
 
-   console.log('\nLibrary West Information:\n' + libWestdata);
+   //console.log('\nLibrary West Information:\n' + libWestdata);
 
 
 };
@@ -32,30 +36,24 @@ var removeCable = function() {
    console.log('\nDeleted the listing!');
 };
 var updatePhelpsMemorial = function() {
-  /*
-    Phelps Memorial Hospital Center's address is incorrect. Find the listing, update it, and then
-    log the updated document to the console.
-   */
-   //var PMHC_update = Listing.find( { code: "Phelps Laboratory" } );
-
-   Listing.findOneAndUpdate( { code: "Phelps Laboratory" }, { address: "TEST ADDRESSS SDFSDFNSFS:LD 1234"} )
-
-   var PMHC_update = Listing.find( {code: "Phelps Laboratory"});
-
-   console.log('\nUpdated Phelps Laboratory\'s address:\n' + PMHC_update);
+  Listing.findOneAndUpdate({name: "Phelps Laboratory"}, {address: "TESTESTSETSETSETSETSTTSETSETSTSETSETSETSETSETSETSTESTETSE"}, { 'new': true }, function(err, phelps) {
+    if (err) throw err;
+    console.log("\nUpdated Phelps:\n" + phelps);
+    });
 };
 var retrieveAllListings = function() {
   /*
     Retrieve all listings in the database, and log them to the console.
    */
-
-   var everything = Listing.find();
-
-   console.log('\nListings Database:\n' + everything);
+ Listing.find({}, function(err, allData) {
+    if (err) throw err;
+    console.log('\nDatabase Information:\n' + allData);
+   });
 };
 
 findLibraryWest();
 removeCable();
 updatePhelpsMemorial();
 retrieveAllListings();
+
 
